@@ -195,7 +195,7 @@ export class PawDrawEditorProvider implements vscode.CustomEditorProvider<PawDra
 	private static newPawDrawFileId = 1;
 
 	public static register(context: vscode.ExtensionContext): vscode.Disposable {
-		vscode.commands.registerCommand('catCustoms.pawDraw.new', () => {
+		vscode.commands.registerCommand('scittPreview.pawDraw.new', () => {
 			const workspaceFolders = vscode.workspace.workspaceFolders;
 			if (!workspaceFolders) {
 				vscode.window.showErrorMessage("Creating new Paw Draw files currently requires opening a workspace");
@@ -222,7 +222,7 @@ export class PawDrawEditorProvider implements vscode.CustomEditorProvider<PawDra
 			});
 	}
 
-	private static readonly viewType = 'catCustoms.pawDraw';
+	private static readonly viewType = 'scittPreview.pawDraw';
 
 	/**
 	 * Tracks all known webviews

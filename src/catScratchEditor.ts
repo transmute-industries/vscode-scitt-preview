@@ -21,7 +21,7 @@ export class CatScratchEditorProvider implements vscode.CustomTextEditorProvider
 		return providerRegistration;
 	}
 
-	private static readonly viewType = 'catCustoms.catScratch';
+	private static readonly viewType = 'scittPreview.catScratch';
 
 	private static readonly scratchCharacters = ['😸', '😹', '😺', '😻', '😼', '😽', '😾', '🙀', '😿', '🐱'];
 

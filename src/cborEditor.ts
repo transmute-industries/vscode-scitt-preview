@@ -195,7 +195,7 @@ export class CborEditorProvider implements vscode.CustomEditorProvider<CborDocum
 	private static newCborFileId = 1;
 
 	public static register(context: vscode.ExtensionContext): vscode.Disposable {
-		vscode.commands.registerCommand('catCustoms.Cbor.new', () => {
+		vscode.commands.registerCommand('scittPreview.Cbor.new', () => {
 			const workspaceFolders = vscode.workspace.workspaceFolders;
 			if (!workspaceFolders) {
 				vscode.window.showErrorMessage("Creating new Paw Draw files currently requires opening a workspace");
@@ -222,7 +222,7 @@ export class CborEditorProvider implements vscode.CustomEditorProvider<CborDocum
 			});
 	}
 
-	private static readonly viewType = 'catCustoms.cbor';
+	private static readonly viewType = 'scittPreview.cbor';
 
 	/**
 	 * Tracks all known webviews
