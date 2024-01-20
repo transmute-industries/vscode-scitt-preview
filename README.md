@@ -28,3 +28,7 @@ I've not tested this very thoroughly, but here you go:
 
 - https://github.com/hildjj/node-cbor
 - https://github.com/microsoft/vscode-extension-samples/tree/main/custom-editor-sample
+
+## History
+
+- [Dev Day Twitter Thread](https://twitter.com/OR13b/status/1748490842774417801)
