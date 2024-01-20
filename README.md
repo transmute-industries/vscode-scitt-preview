@@ -18,3 +18,7 @@ npm run build:vsix
 ```
 
 <img src="./docs/install-vsix.png" alt="install locally built vsix"/>
+
+After successfully installing:
+
+<img src="./docs/after-install.png" alt="scitt preview plugin in list of installed extensions"/>

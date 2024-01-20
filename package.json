@@ -1,9 +1,10 @@
 {
 	"name": "vscode-scitt-preview",
+	"icon": "docs/product-logo.png",
 	"displayName": "SCITT Preview",
-	"description": "EDN for SCITT",
+	"description": "CBOR Extended Diagnostic Notation (EDN) for SCITT",
 	"version": "0.0.1",
-	"publisher": "transmute",
+	"publisher": "Transmute",
 	"private": true,
 	"license": "MIT",
 	"repository": {
