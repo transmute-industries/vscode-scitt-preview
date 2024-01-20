@@ -37,6 +37,15 @@
 						"filenamePattern": "*.pawdraw"
 					}
 				]
+			},
+			{
+				"viewType": "catCustoms.cbor",
+				"displayName": "CBOR",
+				"selector": [
+					{
+						"filenamePattern": "*.cbor"
+					}
+				]
 			}
 		],
 		"commands": [
@@ -44,6 +53,11 @@
 				"command": "catCustoms.pawDraw.new",
 				"title": "Create new Paw Draw Document",
 				"category": "Paw Draw"
+			},
+			{
+				"command": "catCustoms.Cbor.new",
+				"title": "Create new CBOR Document",
+				"category": "CBOR"
 			}
 		]
 	},
