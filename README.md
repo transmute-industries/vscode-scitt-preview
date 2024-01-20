@@ -1,12 +1,8 @@
-# SCITT Preview Plugin
+# SCITT Preview
 
-View SCITT Signatures and Receipts in VSCode.
+View CBOR Extended Diagnostic Notation (EDN) for `.cbor` files in VSCode.
 
-## Based on 
-
-- https://github.com/hildjj/node-cbor
-- https://github.com/microsoft/vscode-extension-samples/tree/main/custom-editor-sample
-
+This plugin is not published to the marketplace.
 
 ## Building and Installing Locally
 
@@ -22,3 +18,13 @@ npm run build:vsix
 After successfully installing:
 
 <img src="./docs/after-install.png" alt="scitt preview plugin in list of installed extensions"/>
+
+I've not tested this very thoroughly, but here you go:
+
+<img src="./docs/preview-demo.png" alt="edn from a cbor message displayed in vscode"/>
+
+
+## Based on 
+
+- https://github.com/hildjj/node-cbor
+- https://github.com/microsoft/vscode-extension-samples/tree/main/custom-editor-sample
