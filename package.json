@@ -21,24 +21,6 @@
 	"contributes": {
 		"customEditors": [
 			{
-				"viewType": "scittPreview.catScratch",
-				"displayName": "Cat Scratch",
-				"selector": [
-					{
-						"filenamePattern": "*.cscratch"
-					}
-				]
-			},
-			{
-				"viewType": "scittPreview.pawDraw",
-				"displayName": "Paw Draw",
-				"selector": [
-					{
-						"filenamePattern": "*.pawdraw"
-					}
-				]
-			},
-			{
 				"viewType": "scittPreview.cbor",
 				"displayName": "CBOR",
 				"selector": [
@@ -49,11 +31,6 @@
 			}
 		],
 		"commands": [
-			{
-				"command": "scittPreview.pawDraw.new",
-				"title": "Create new Paw Draw Document",
-				"category": "Paw Draw"
-			},
 			{
 				"command": "scittPreview.Cbor.new",
 				"title": "Create new CBOR Document",
