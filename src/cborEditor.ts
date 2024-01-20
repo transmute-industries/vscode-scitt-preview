@@ -2,6 +2,8 @@ import * as vscode from 'vscode';
 import { Disposable, disposeAll } from './dispose';
 import { getNonce } from './util';
 
+import * as cbor from 'cbor';
+
 /**
  * Define the type of edits used in paw draw files.
  */
@@ -303,11 +305,14 @@ export class CborEditorProvider implements vscode.CustomEditorProvider<CborDocum
 					});
 				} else {
 					const editable = vscode.workspace.fs.isWritableFileSystem(document.uri.scheme);
-
-					this.postMessage(webviewPanel, 'init', {
-						value: document.documentData,
-						editable,
-					});
+					(async ()=>{
+						const edn = await cbor.diagnose(document.documentData);
+						this.postMessage(webviewPanel, 'init', {
+							value: edn,
+							editable,
+						});
+					})();
+					
 				}
 			}
 		});
@@ -375,16 +380,7 @@ export class CborEditorProvider implements vscode.CustomEditorProvider<CborDocum
 				<title>Paw Draw</title>
 			</head>
 			<body>
-				<div class="drawing-canvas"></div>
-
-				<div class="drawing-controls">
-					<button data-color="black" class="black active" title="Black"></button>
-					<button data-color="white" class="white" title="White"></button>
-					<button data-color="red" class="red" title="Red"></button>
-					<button data-color="green" class="green" title="Green"></button>
-					<button data-color="blue" class="blue" title="Blue"></button>
-				</div>
-
+				<pre class="edn-preview"></pre>
 				<script nonce="${nonce}" src="${scriptUri}"></script>
 			</body>
 			</html>`;
