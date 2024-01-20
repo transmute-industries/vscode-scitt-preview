@@ -16,3 +16,5 @@ cd vscode-scitt-preview;
 npm i
 npm run build:vsix
 ```
+
+<img src="./docs/install-vsix.png" alt="install locally built vsix"/>
