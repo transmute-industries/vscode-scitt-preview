@@ -53,7 +53,6 @@
 		"typescript": "^5.3.2"
 	},
 	"dependencies": {
-		"cbor": "^9.0.1",
-		"cbor-web": "^9.0.1"
+		"cbor": "^9.0.1"
 	}
 }
