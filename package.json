@@ -57,6 +57,6 @@
 	},
 	"dependencies": {
 		"@transmute/edn": "^0.0.1",
-		"cbor": "^9.0.1"
+		"cbor": "^9.0.2"
 	}
 }
