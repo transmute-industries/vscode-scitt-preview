@@ -311,9 +311,9 @@ export class CborEditorProvider implements vscode.CustomEditorProvider<CborDocum
 					const editable = vscode.workspace.fs.isWritableFileSystem(document.uri.scheme);
 					(async ()=>{
 						try{
-							const html = await edn.render(Buffer.from(document.documentData));
+							const text = await edn.render(Buffer.from(document.documentData), 'application/cbor-diagnostic');
 							this.postMessage(webviewPanel, 'init', {
-								value: html,
+								value: text,
 								editable,
 							});
 						} catch(e){
@@ -393,7 +393,7 @@ export class CborEditorProvider implements vscode.CustomEditorProvider<CborDocum
 				<title>Paw Draw</title>
 			</head>
 			<body>
-				<section class="edn-preview"></section>
+				<pre class="edn-preview"></pre>
 				<script nonce="${nonce}" src="${scriptUri}"></script>
 			</body>
 			</html>`;
